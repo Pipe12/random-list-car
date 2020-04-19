@@ -25,5 +25,11 @@ function carSimulation() {
   let color = colors[ randomNumber(colors.length) ]
   let engineSize = engineSizes[ randomNumber(engineSizes.length) ]  
   let randomCar = [brand, color, engineSize]
-  console.log(`El carro es un ${brand} de color ${color} y tiene una cilindrada de ${engineSize}`)
+  return randomCar
+}
+
+function Car(randomCar) {
+  this.brand = randomCar[0]
+  this.color = randomCar[1]
+  this.engineSize = randomCar[2]
 }
