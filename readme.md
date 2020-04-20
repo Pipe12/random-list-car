@@ -8,6 +8,8 @@ Generar un lista de 30 objetos (carro). que utilice una funcion constructora y u
 2. Simular carro.
 3. Crear Nuevo carro.
 4. Guardar en la lista de carros.
+5. Uso el metodo .filter para determinar los carros de menos de 2000 cc
+6. Uso el metodo .map para solo traer un listado de las marcas de los carros
 
 ```javascript
 // VARIABLES
@@ -43,4 +45,12 @@ function generateCarList() {
   }
   console.log(carList)
 }
+
+let carLess2000 = carList.filter(function(car) { 
+  return car.engineSize <= 2000
+})
+
+let carBrands = carList.map(function(car) {
+  return car.brand
+})
 ```
