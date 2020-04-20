@@ -38,5 +38,16 @@ function generateCarList() {
     carList[i] = new Car()
   }
   console.log(carList)
+  return carList
 }
+
+generateCarList()
+
+let carLess2000 = carList.filter(function(car) { 
+  return car.engineSize <= 2000
+})
+
+let carBrands = carList.map(function(car) {
+  return car.brand
+})
 
